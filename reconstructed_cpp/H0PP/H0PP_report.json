@@ -1,0 +1,2442 @@
+{
+ "prefix": "H0PP",
+ "source": "D:\\tmp\\H0PP_all_decompiled.txt",
+ "functions_total": 280,
+ "functions_emitted": 280,
+ "functions_skipped": [],
+ "duplicate_names": 128,
+ "types": 91,
+ "types_by_value": [
+  "GIDKey",
+  "GroupKey",
+  "Index",
+  "Py_ssize_t",
+  "SecInfo",
+  "SliceData",
+  "_Alloc_hider",
+  "_Base_ptr",
+  "_Const_Link_type",
+  "_Link_type",
+  "_Rb_tree_color",
+  "_Stack",
+  "_Tuple_impl_0ul__SecInfo__Data2___std__default_delete_SecInfo__Data2_",
+  "_Tuple_impl_0ul__SecInfo__Data___std__default_delete_SecInfo__Data_",
+  "_Tuple_impl_0ul__SecInfo__GroupData1___std__default_delete_SecInfo__GroupData1_",
+  "_Tuple_impl_0ul__SecInfo__GroupData2___std__default_delete_SecInfo__GroupData2_",
+  "allocator",
+  "basic_string_char__std__char_traits_char__std__allocator_char_",
+  "const_iterator",
+  "hol",
+  "inde",
+  "iterator",
+  "local_",
+  "pStack_",
+  "pVa",
+  "pair_int__std__basic_string_char__std__char_traits_char__std__allocator_char__",
+  "pair_std___Rb_tree_node_base___std___Rb_tree_node_base_",
+  "pair_std__basic_string_char__std__char_traits_char__std__allocator_char___double",
+  "parse_ctx",
+  "pointer",
+  "re",
+  "retur",
+  "se_alpha",
+  "se_pr",
+  "string",
+  "typedef___va_list_tag___va_list_tag",
+  "uchar",
+  "usabl",
+  "v",
+  "vector_double__std__allocator_double_",
+  "vector_unsigned_char__std__allocator_unsigned_char_"
+ ],
+ "globals": 105,
+ "globals_unresolved": [
+  "DAT_0010fd10",
+  "PTR_VTT_00311fe0",
+  "PTR___pthread_key_create_00311fd8",
+  "PTR__map_00311f88",
+  "PTR__map_00311f90",
+  "PTR__map_00311fa0",
+  "PTR__unique_ptr_00311fe8",
+  "PTR_data_store2_00311f70",
+  "PTR_vsnprintf_00311fd0",
+  "PTR_vtable_00311f68",
+  "PTR_vtable_00311fb0",
+  "_SecInfo__Data",
+  "_SecInfo__Data2",
+  "_SecInfo__GroupData1",
+  "_SecInfo__GroupData2",
+  "_func_int_char_ptr_size_t_char_ptr_typedef___va_list_tag___va_list_tag_ptr",
+  "_std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char___",
+  "_std__allocator_std__vector_double__std__allocator_double___",
+  "_std__allocator_unsigned_char_",
+  "_std__basic_string_char__std__char_traits_char__std__allocator_char_",
+  "_std__default_delete_SecInfo__Data2_",
+  "_std__default_delete_SecInfo__Data_",
+  "_std__default_delete_SecInfo__GroupData1_",
+  "_std__default_delete_SecInfo__GroupData2_",
+  "std__basic_string_char__std__char_traits_char__std__allocator_char_",
+  "std__vector_double__std__allocator_double_",
+  "super__Rb_tree_node_base",
+  "super__Tuple_impl",
+  "super__Vector_base",
+  "super__Vector_base_double__std__allocator_double_"
+ ],
+ "globals_notes": {
+  "DAT_0010fbf2": "array/address (byte)",
+  "DAT_0010fbf4": "array/address (byte)",
+  "DAT_0010fc03": "array/address (byte)",
+  "DAT_0010fc04": "floating literal -> double",
+  "DAT_0010fd10": "unresolved (pointer placeholder)",
+  "PTR_00312010": "cast(g) -> code*",
+  "PTR_PyArg_ParseTuple_00312188": "cast(g) -> code*",
+  "PTR_PyBytes_AsString_003121b8": "cast(g) -> code*",
+  "PTR_PyBytes_FromStringAndSize_003122a8": "cast(g) -> code*",
+  "PTR_PyBytes_Size_003120e0": "cast(g) -> code*",
+  "PTR_PyList_New_00312378": "cast(g) -> code*",
+  "PTR_PyList_SetItem_00312330": "cast(g) -> code*",
+  "PTR_PyLong_AsLong_00312170": "cast(g) -> code*",
+  "PTR_PyLong_AsVoidPtr_00312080": "cast(g) -> code*",
+  "PTR_PyLong_FromVoidPtr_00312070": "cast(g) -> code*",
+  "PTR_PyModule_Create2_003122f8": "cast(g) -> code*",
+  "PTR_PyTuple_New_00312300": "cast(g) -> code*",
+  "PTR_PyUnicode_AsUTF8_00312380": "cast(g) -> code*",
+  "PTR_Py_BuildValue_00312260": "cast(g) -> code*",
+  "PTR_VTT_00311fe0": "unresolved (pointer placeholder)",
+  "PTR__Jv_RegisterClasses_00311f80": "cast(g) -> code*",
+  "PTR__M_destroy_00312198": "cast(g) -> code*",
+  "PTR__M_dispose_003120d8": "cast(g) -> code*",
+  "PTR__M_widen_init_003120e8": "cast(g) -> code*",
+  "PTR__Rb_tree_decrement_00312138": "cast(g) -> code*",
+  "PTR__Rb_tree_increment_00312310": "cast(g) -> code*",
+  "PTR__Rb_tree_insert_and_rebalance_00312270": "cast(g) -> code*",
+  "PTR__S_create_00312140": "cast(g) -> code*",
+  "PTR__S_empty_rep_storage_00311ff0": "cast(g) -> allocator*",
+  "PTR__Unwind_Resume_00312368": "cast(g) -> code*",
+  "PTR___cxa_atexit_00312158": "cast(g) -> code*",
+  "PTR___cxa_begin_catch_00312338": "cast(g) -> code*",
+  "PTR___cxa_end_catch_00312318": "cast(g) -> code*",
+  "PTR___cxa_finalize_00311fb8": "cast(g) -> code*",
+  "PTR___cxa_rethrow_00312110": "cast(g) -> code*",
+  "PTR___gmon_start___00311f78": "cast(g) -> code*",
+  "PTR___pthread_key_create_00311fd8": "unresolved (pointer placeholder)",
+  "PTR___throw_bad_alloc_00312320": "cast(g) -> code*",
+  "PTR___throw_bad_cast_00312068": "cast(g) -> code*",
+  "PTR__filebuf_00312328": "cast(g) -> code*",
+  "PTR__ios_base_00312290": "cast(g) -> code*",
+  "PTR__map_00311f88": "unresolved (pointer placeholder)",
+  "PTR__map_00311f90": "unresolved (pointer placeholder)",
+  "PTR__map_00311fa0": "unresolved (pointer placeholder)",
+  "PTR__unique_ptr_00311fe8": "unresolved (pointer placeholder)",
+  "PTR_append_00312020": "cast(g) -> code*",
+  "PTR_append_00312390": "cast(g) -> code*",
+  "PTR_assign_003122b8": "cast(g) -> code*",
+  "PTR_clear_003122d8": "cast(g) -> code*",
+  "PTR_data_00311fc8": "cast(g) -> long*",
+  "PTR_data_store2_00311f70": "unresolved (pointer placeholder)",
+  "PTR_dlopen_00312370": "cast(g) -> code*",
+  "PTR_dlsym_00312160": "cast(g) -> code*",
+  "PTR_fclose_003122e0": "cast(g) -> code*",
+  "PTR_filebuf_00312308": "cast(g) -> code*",
+  "PTR_find_003121f8": "cast(g) -> code*",
+  "PTR_fopen_00312120": "cast(g) -> code*",
+  "PTR_fread_00312228": "cast(g) -> code*",
+  "PTR_getenv_00312240": "cast(g) -> code*",
+  "PTR_getline_char_std_char_traits_char_std_allocator_char_00312030": "cast(g) -> code*",
+  "PTR_group_data_store1_00311fc0": "cast(g) -> _Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____*",
+  "PTR_group_data_store2_00311ff8": "cast(g) -> _Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____*",
+  "PTR_init_00312248": "cast(g) -> code*",
+  "PTR_insert_003121e0": "cast(g) -> code*",
+  "PTR_ios_base_00312078": "cast(g) -> code*",
+  "PTR_memcmp_003122d0": "cast(g) -> code*",
+  "PTR_memcpy_00312388": "cast(g) -> code*",
+  "PTR_memmove_00312220": "cast(g) -> code*",
+  "PTR_open_00312168": "cast(g) -> code*",
+  "PTR_operator_delete_003120b8": "cast(g) -> code*",
+  "PTR_operator_delete___003122c0": "cast(g) -> code*",
+  "PTR_operator_new_00312360": "cast(g) -> code*",
+  "PTR_operator_new___003120a8": "cast(g) -> code*",
+  "PTR_reserve_003120d0": "cast(g) -> code*",
+  "PTR_strcmp_00312298": "cast(g) -> code*",
+  "PTR_strcpy_003122b0": "cast(g) -> code*",
+  "PTR_string_00312088": "cast(g) -> code*",
+  "PTR_string_00312150": "cast(g) -> code*",
+  "PTR_string_003121f0": "cast(g) -> code*",
+  "PTR_vsnprintf_00311fd0": "unresolved (pointer placeholder)",
+  "PTR_vtable_00311f68": "unresolved (pointer placeholder)",
+  "PTR_vtable_00311fb0": "unresolved (pointer placeholder)",
+  "_SecInfo__Data": "unresolved (pointer placeholder)",
+  "_SecInfo__Data2": "unresolved (pointer placeholder)",
+  "_SecInfo__GroupData1": "unresolved (pointer placeholder)",
+  "_SecInfo__GroupData2": "unresolved (pointer placeholder)",
+  "__JCR_END__": "array/address (byte)",
+  "__dso_handle": "array/address (byte)",
+  "_func_int_char_ptr_size_t_char_ptr_typedef___va_list_tag___va_list_tag_ptr": "unresolved (pointer placeholder)",
+  "_std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char___": "unresolved (pointer placeholder)",
+  "_std__allocator_std__vector_double__std__allocator_double___": "unresolved (pointer placeholder)",
+  "_std__allocator_unsigned_char_": "unresolved (pointer placeholder)",
+  "_std__basic_string_char__std__char_traits_char__std__allocator_char_": "unresolved (pointer placeholder)",
+  "_std__default_delete_SecInfo__Data2_": "unresolved (pointer placeholder)",
+  "_std__default_delete_SecInfo__Data_": "unresolved (pointer placeholder)",
+  "_std__default_delete_SecInfo__GroupData1_": "unresolved (pointer placeholder)",
+  "_std__default_delete_SecInfo__GroupData2_": "unresolved (pointer placeholder)",
+  "completed_6355": "assignment -> int64_t",
+  "module__pypinot": "array/address (byte)",
+  "std__basic_string_char__std__char_traits_char__std__allocator_char_": "unresolved (pointer placeholder)",
+  "std__vector_double__std__allocator_double_": "unresolved (pointer placeholder)",
+  "super__Rb_tree_node_base": "unresolved (pointer placeholder)",
+  "super__Tuple_impl": "unresolved (pointer placeholder)",
+  "super__Vector_base": "unresolved (pointer placeholder)",
+  "super__Vector_base_double__std__allocator_double_": "unresolved (pointer placeholder)"
+ },
+ "translation_units": 2,
+ "chunk_size": 200,
+ "demangled_symbols": 30,
+ "manifest": [
+  {
+   "idx": 0,
+   "name": "rea__init",
+   "orig": "_init",
+   "file": "part_0001.cpp",
+   "line_start": 3,
+   "line_end": 20
+  },
+  {
+   "idx": 1,
+   "name": "rea_FUN_00104f00",
+   "orig": "FUN_00104f00",
+   "file": "part_0001.cpp",
+   "line_start": 21,
+   "line_end": 33
+  },
+  {
+   "idx": 2,
+   "name": "rea_pinot_open",
+   "orig": "pinot_open",
+   "file": "part_0001.cpp",
+   "line_start": 34,
+   "line_end": 103
+  },
+  {
+   "idx": 3,
+   "name": "rea_std__string__append",
+   "orig": "std__string__append",
+   "file": "part_0001.cpp",
+   "line_start": 104,
+   "line_end": 116
+  },
+  {
+   "idx": 4,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_insert__const_std__pair_std__basic_string_char__double",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_insert__const_std__pair_std__basic_string_char__double____________",
+   "file": "part_0001.cpp",
+   "line_start": 117,
+   "line_end": 169
+  },
+  {
+   "idx": 5,
+   "name": "rea_std__getline_char_std__char_traits_char_std__allocator_char",
+   "orig": "std__getline_char_std__char_traits_char_std__allocator_char",
+   "file": "part_0001.cpp",
+   "line_start": 170,
+   "line_end": 185
+  },
+  {
+   "idx": 6,
+   "name": "rea_IndexedData_GIDKey__Item__free",
+   "orig": "IndexedData_GIDKey__Item__free",
+   "file": "part_0001.cpp",
+   "line_start": 186,
+   "line_end": 207
+  },
+  {
+   "idx": 7,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_erase",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 208,
+   "line_end": 246
+  },
+  {
+   "idx": 8,
+   "name": "rea__Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____M___parse",
+   "orig": "_Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____M___parse",
+   "file": "part_0001.cpp",
+   "line_start": 247,
+   "line_end": 644
+  },
+  {
+   "idx": 9,
+   "name": "rea_SecInfo__getRescale",
+   "orig": "SecInfo__getRescale",
+   "file": "part_0001.cpp",
+   "line_start": 645,
+   "line_end": 665
+  },
+  {
+   "idx": 10,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 666,
+   "line_end": 718
+  },
+  {
+   "idx": 11,
+   "name": "rea_SecInfo__find_group_data2",
+   "orig": "SecInfo__find_group_data2",
+   "file": "part_0001.cpp",
+   "line_start": 719,
+   "line_end": 1017
+  },
+  {
+   "idx": 12,
+   "name": "rea_std____throw_bad_cast",
+   "orig": "std____throw_bad_cast",
+   "file": "part_0001.cpp",
+   "line_start": 1018,
+   "line_end": 1030
+  },
+  {
+   "idx": 13,
+   "name": "rea_PyLong_FromVoidPtr",
+   "orig": "PyLong_FromVoidPtr",
+   "file": "part_0001.cpp",
+   "line_start": 1031,
+   "line_end": 1043
+  },
+  {
+   "idx": 14,
+   "name": "rea_std__ios_base__ios_base",
+   "orig": "std__ios_base__ios_base",
+   "file": "part_0001.cpp",
+   "line_start": 1044,
+   "line_end": 1056
+  },
+  {
+   "idx": 15,
+   "name": "rea_PyLong_AsVoidPtr",
+   "orig": "PyLong_AsVoidPtr",
+   "file": "part_0001.cpp",
+   "line_start": 1057,
+   "line_end": 1069
+  },
+  {
+   "idx": 16,
+   "name": "rea_std__string__string",
+   "orig": "std__string__string",
+   "file": "part_0001.cpp",
+   "line_start": 1070,
+   "line_end": 1082
+  },
+  {
+   "idx": 17,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_______M_emplace_hint_unique_const_std__piecewise_construct_t___std__tuple_const_std__basic_string_char__std__char_traits_char__std__allocator_char____std__tuple",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_______M_emplace_hint_unique_const_std__piecewise_construct_t___std__tuple_const_std__basic_string_char__std__char_traits_char__std__allocator_char____std__tuple_____________",
+   "file": "part_0001.cpp",
+   "line_start": 1083,
+   "line_end": 1171
+  },
+  {
+   "idx": 18,
+   "name": "rea_getClosePrice",
+   "orig": "getClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 1172,
+   "line_end": 1188
+  },
+  {
+   "idx": 19,
+   "name": "rea_std__vector_double__std__allocator_double____M_emplace_back_aux_double_const",
+   "orig": "std__vector_double__std__allocator_double____M_emplace_back_aux_double_const____________",
+   "file": "part_0001.cpp",
+   "line_start": 1189,
+   "line_end": 1241
+  },
+  {
+   "idx": 20,
+   "name": "rea_operator__new",
+   "orig": "operator_new__",
+   "file": "part_0001.cpp",
+   "line_start": 1242,
+   "line_end": 1256
+  },
+  {
+   "idx": 21,
+   "name": "rea_IndexedData_GIDKey__GroupBackwardItem__free",
+   "orig": "IndexedData_GIDKey__GroupBackwardItem__free",
+   "file": "part_0001.cpp",
+   "line_start": 1257,
+   "line_end": 1278
+  },
+  {
+   "idx": 22,
+   "name": "rea_operator__delete",
+   "orig": "operator_delete",
+   "file": "part_0001.cpp",
+   "line_start": 1279,
+   "line_end": 1291
+  },
+  {
+   "idx": 23,
+   "name": "rea_std___pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char______pair",
+   "orig": "std___pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char______pair",
+   "file": "part_0001.cpp",
+   "line_start": 1292,
+   "line_end": 1362
+  },
+  {
+   "idx": 24,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_erase",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 1363,
+   "line_end": 1402
+  },
+  {
+   "idx": 25,
+   "name": "rea_std__string__reserve",
+   "orig": "std__string__reserve",
+   "file": "part_0001.cpp",
+   "line_start": 1403,
+   "line_end": 1415
+  },
+  {
+   "idx": 26,
+   "name": "rea_std__string___Rep___M_dispose",
+   "orig": "std__string___Rep___M_dispose",
+   "file": "part_0001.cpp",
+   "line_start": 1416,
+   "line_end": 1428
+  },
+  {
+   "idx": 27,
+   "name": "rea_PyBytes_Size",
+   "orig": "PyBytes_Size",
+   "file": "part_0001.cpp",
+   "line_start": 1429,
+   "line_end": 1441
+  },
+  {
+   "idx": 28,
+   "name": "rea_std__ctype_char___M_widen_init",
+   "orig": "std__ctype_char___M_widen_init",
+   "file": "part_0001.cpp",
+   "line_start": 1442,
+   "line_end": 1454
+  },
+  {
+   "idx": 29,
+   "name": "rea_getRescale",
+   "orig": "getRescale",
+   "file": "part_0001.cpp",
+   "line_start": 1455,
+   "line_end": 1471
+  },
+  {
+   "idx": 30,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_insert__const_std__pair_std__basic_string_char__std__vector_double",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_insert__const_std__pair_std__basic_string_char__std__vector_double_____________",
+   "file": "part_0001.cpp",
+   "line_start": 1472,
+   "line_end": 1561
+  },
+  {
+   "idx": 31,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____________",
+   "file": "part_0001.cpp",
+   "line_start": 1562,
+   "line_end": 1624
+  },
+  {
+   "idx": 32,
+   "name": "rea_getPreClosePrice",
+   "orig": "getPreClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 1625,
+   "line_end": 1641
+  },
+  {
+   "idx": 33,
+   "name": "rea___cxa_rethrow",
+   "orig": "__cxa_rethrow",
+   "file": "part_0001.cpp",
+   "line_start": 1642,
+   "line_end": 1654
+  },
+  {
+   "idx": 34,
+   "name": "rea__Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double____std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___double___M___parse",
+   "orig": "_Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double____std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___double___M___parse",
+   "file": "part_0001.cpp",
+   "line_start": 1655,
+   "line_end": 1875
+  },
+  {
+   "idx": 35,
+   "name": "rea_fopen",
+   "orig": "fopen",
+   "file": "part_0001.cpp",
+   "line_start": 1876,
+   "line_end": 1890
+  },
+  {
+   "idx": 36,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_insert_node",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 1891,
+   "line_end": 1916
+  },
+  {
+   "idx": 37,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 1917,
+   "line_end": 1969
+  },
+  {
+   "idx": 38,
+   "name": "rea_std___Rb_tree_decrement",
+   "orig": "std___Rb_tree_decrement",
+   "file": "part_0001.cpp",
+   "line_start": 1970,
+   "line_end": 1982
+  },
+  {
+   "idx": 39,
+   "name": "rea_std__string___Rep___S_create",
+   "orig": "std__string___Rep___S_create",
+   "file": "part_0001.cpp",
+   "line_start": 1983,
+   "line_end": 1995
+  },
+  {
+   "idx": 40,
+   "name": "rea_SecInfo__find_group_data1",
+   "orig": "SecInfo__find_group_data1",
+   "file": "part_0001.cpp",
+   "line_start": 1996,
+   "line_end": 2288
+  },
+  {
+   "idx": 41,
+   "name": "rea_std__string__string__dup2",
+   "orig": "std__string__string",
+   "file": "part_0001.cpp",
+   "line_start": 2289,
+   "line_end": 2301
+  },
+  {
+   "idx": 42,
+   "name": "rea___cxa_atexit",
+   "orig": "__cxa_atexit",
+   "file": "part_0001.cpp",
+   "line_start": 2302,
+   "line_end": 2314
+  },
+  {
+   "idx": 43,
+   "name": "rea_dlsym",
+   "orig": "dlsym",
+   "file": "part_0001.cpp",
+   "line_start": 2315,
+   "line_end": 2327
+  },
+  {
+   "idx": 44,
+   "name": "rea_std__filebuf__open",
+   "orig": "std__filebuf__open",
+   "file": "part_0001.cpp",
+   "line_start": 2328,
+   "line_end": 2340
+  },
+  {
+   "idx": 45,
+   "name": "rea_PyLong_AsLong",
+   "orig": "PyLong_AsLong",
+   "file": "part_0001.cpp",
+   "line_start": 2341,
+   "line_end": 2353
+  },
+  {
+   "idx": 46,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_insert_node",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 2354,
+   "line_end": 2379
+  },
+  {
+   "idx": 47,
+   "name": "rea_SecInfo__getLastClosePrice",
+   "orig": "SecInfo__getLastClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 2380,
+   "line_end": 2465
+  },
+  {
+   "idx": 48,
+   "name": "rea_PyArg_ParseTuple",
+   "orig": "PyArg_ParseTuple",
+   "file": "part_0001.cpp",
+   "line_start": 2466,
+   "line_end": 2478
+  },
+  {
+   "idx": 49,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_erase",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 2479,
+   "line_end": 2520
+  },
+  {
+   "idx": 50,
+   "name": "rea_std__string___Rep___M_destroy",
+   "orig": "std__string___Rep___M_destroy",
+   "file": "part_0001.cpp",
+   "line_start": 2521,
+   "line_end": 2533
+  },
+  {
+   "idx": 51,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 2534,
+   "line_end": 2586
+  },
+  {
+   "idx": 52,
+   "name": "rea_SecInfo__getClosePrice",
+   "orig": "SecInfo__getClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 2587,
+   "line_end": 2662
+  },
+  {
+   "idx": 53,
+   "name": "rea_SecInfo__getPreDate",
+   "orig": "SecInfo__getPreDate",
+   "file": "part_0001.cpp",
+   "line_start": 2663,
+   "line_end": 2745
+  },
+  {
+   "idx": 54,
+   "name": "rea_PyBytes_AsString",
+   "orig": "PyBytes_AsString",
+   "file": "part_0001.cpp",
+   "line_start": 2746,
+   "line_end": 2758
+  },
+  {
+   "idx": 55,
+   "name": "rea_std__vector_double__std__allocator_double___operator__assign",
+   "orig": "std__vector_double__std__allocator_double___operator_assign___________",
+   "file": "part_0001.cpp",
+   "line_start": 2759,
+   "line_end": 2996
+  },
+  {
+   "idx": 56,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_copy",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_copy",
+   "file": "part_0001.cpp",
+   "line_start": 2997,
+   "line_end": 3152
+  },
+  {
+   "idx": 57,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_insert_node",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 3153,
+   "line_end": 3178
+  },
+  {
+   "idx": 58,
+   "name": "rea_SecInfo__find_data2",
+   "orig": "SecInfo__find_data2",
+   "file": "part_0001.cpp",
+   "line_start": 3179,
+   "line_end": 3435
+  },
+  {
+   "idx": 59,
+   "name": "rea_std__string__insert",
+   "orig": "std__string__insert",
+   "file": "part_0001.cpp",
+   "line_start": 3436,
+   "line_end": 3448
+  },
+  {
+   "idx": 60,
+   "name": "rea_IndexedData_GroupKey__GroupForwardItem__free",
+   "orig": "IndexedData_GroupKey__GroupForwardItem__free",
+   "file": "part_0001.cpp",
+   "line_start": 3449,
+   "line_end": 3470
+  },
+  {
+   "idx": 61,
+   "name": "rea_std__string__string__dup3",
+   "orig": "std__string__string",
+   "file": "part_0001.cpp",
+   "line_start": 3471,
+   "line_end": 3483
+  },
+  {
+   "idx": 62,
+   "name": "rea_std__string__find",
+   "orig": "std__string__find",
+   "file": "part_0001.cpp",
+   "line_start": 3484,
+   "line_end": 3496
+  },
+  {
+   "idx": 63,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____________",
+   "file": "part_0001.cpp",
+   "line_start": 3497,
+   "line_end": 3559
+  },
+  {
+   "idx": 64,
+   "name": "rea_getLastClosePrice",
+   "orig": "getLastClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 3560,
+   "line_end": 3576
+  },
+  {
+   "idx": 65,
+   "name": "rea_SecInfo__getPreClosePrice",
+   "orig": "SecInfo__getPreClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 3577,
+   "line_end": 3652
+  },
+  {
+   "idx": 66,
+   "name": "rea_pinot_close",
+   "orig": "pinot_close",
+   "file": "part_0001.cpp",
+   "line_start": 3653,
+   "line_end": 3681
+  },
+  {
+   "idx": 67,
+   "name": "rea_memmove",
+   "orig": "memmove",
+   "file": "part_0001.cpp",
+   "line_start": 3682,
+   "line_end": 3696
+  },
+  {
+   "idx": 68,
+   "name": "rea_fread",
+   "orig": "fread",
+   "file": "part_0001.cpp",
+   "line_start": 3697,
+   "line_end": 3711
+  },
+  {
+   "idx": 69,
+   "name": "rea_pinot_getline",
+   "orig": "pinot_getline",
+   "file": "part_0001.cpp",
+   "line_start": 3712,
+   "line_end": 3785
+  },
+  {
+   "idx": 70,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_hint_unique_pos",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 3786,
+   "line_end": 3940
+  },
+  {
+   "idx": 71,
+   "name": "rea_getenv",
+   "orig": "getenv",
+   "file": "part_0001.cpp",
+   "line_start": 3941,
+   "line_end": 3955
+  },
+  {
+   "idx": 72,
+   "name": "rea_std__ios__init",
+   "orig": "std__ios__init",
+   "file": "part_0001.cpp",
+   "line_start": 3956,
+   "line_end": 3968
+  },
+  {
+   "idx": 73,
+   "name": "rea_std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______pair",
+   "orig": "std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______pair",
+   "file": "part_0001.cpp",
+   "line_start": 3969,
+   "line_end": 4006
+  },
+  {
+   "idx": 74,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_unique_pos",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 4007,
+   "line_end": 4107
+  },
+  {
+   "idx": 75,
+   "name": "rea_Py_BuildValue",
+   "orig": "Py_BuildValue",
+   "file": "part_0001.cpp",
+   "line_start": 4108,
+   "line_end": 4120
+  },
+  {
+   "idx": 76,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_hint_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 4121,
+   "line_end": 4190
+  },
+  {
+   "idx": 77,
+   "name": "rea_std___Rb_tree_insert_and_rebalance",
+   "orig": "std___Rb_tree_insert_and_rebalance________________",
+   "file": "part_0001.cpp",
+   "line_start": 4191,
+   "line_end": 4203
+  },
+  {
+   "idx": 78,
+   "name": "rea_std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______M_emplace_back_aux_const_std__basic_string_char__std__char_traits_char__std__allocator_char",
+   "orig": "std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______M_emplace_back_aux_const_std__basic_string_char__std__char_traits_char__std__allocator_char_____________",
+   "file": "part_0001.cpp",
+   "line_start": 4204,
+   "line_end": 4332
+  },
+  {
+   "idx": 79,
+   "name": "rea_detail__P_std__basic_string_char__std__char_traits_char__std__allocator_char____parse",
+   "orig": "detail__P_std__basic_string_char__std__char_traits_char__std__allocator_char____parse__________________",
+   "file": "part_0001.cpp",
+   "line_start": 4333,
+   "line_end": 4407
+  },
+  {
+   "idx": 80,
+   "name": "rea_std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char_______pair",
+   "orig": "std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char_______pair",
+   "file": "part_0001.cpp",
+   "line_start": 4408,
+   "line_end": 4495
+  },
+  {
+   "idx": 81,
+   "name": "rea_std__ios_base__dtor_ios_base",
+   "orig": "std__ios_base__dtor_ios_base",
+   "file": "part_0001.cpp",
+   "line_start": 4496,
+   "line_end": 4508
+  },
+  {
+   "idx": 82,
+   "name": "rea_strcmp",
+   "orig": "strcmp",
+   "file": "part_0001.cpp",
+   "line_start": 4509,
+   "line_end": 4523
+  },
+  {
+   "idx": 83,
+   "name": "rea_std___vector_std__vector_double__std__allocator_double___std__allocator_std__vector_double__std__allocator_double_______vector",
+   "orig": "std___vector_std__vector_double__std__allocator_double___std__allocator_std__vector_double__std__allocator_double_______vector",
+   "file": "part_0001.cpp",
+   "line_start": 4524,
+   "line_end": 4561
+  },
+  {
+   "idx": 84,
+   "name": "rea_PyBytes_FromStringAndSize",
+   "orig": "PyBytes_FromStringAndSize",
+   "file": "part_0001.cpp",
+   "line_start": 4562,
+   "line_end": 4574
+  },
+  {
+   "idx": 85,
+   "name": "rea_strcpy",
+   "orig": "strcpy",
+   "file": "part_0001.cpp",
+   "line_start": 4575,
+   "line_end": 4589
+  },
+  {
+   "idx": 86,
+   "name": "rea_std__string__assign",
+   "orig": "std__string__assign",
+   "file": "part_0001.cpp",
+   "line_start": 4590,
+   "line_end": 4602
+  },
+  {
+   "idx": 87,
+   "name": "rea_operator__delete__dup2",
+   "orig": "operator_delete__",
+   "file": "part_0001.cpp",
+   "line_start": 4603,
+   "line_end": 4615
+  },
+  {
+   "idx": 88,
+   "name": "rea_IndexedData_GIDKey__Item2__free",
+   "orig": "IndexedData_GIDKey__Item2__free",
+   "file": "part_0001.cpp",
+   "line_start": 4616,
+   "line_end": 4637
+  },
+  {
+   "idx": 89,
+   "name": "rea_memcmp",
+   "orig": "memcmp",
+   "file": "part_0001.cpp",
+   "line_start": 4638,
+   "line_end": 4652
+  },
+  {
+   "idx": 90,
+   "name": "rea_std__ios__clear",
+   "orig": "std__ios__clear",
+   "file": "part_0001.cpp",
+   "line_start": 4653,
+   "line_end": 4665
+  },
+  {
+   "idx": 91,
+   "name": "rea_fclose",
+   "orig": "fclose",
+   "file": "part_0001.cpp",
+   "line_start": 4666,
+   "line_end": 4680
+  },
+  {
+   "idx": 92,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_______find",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_______find",
+   "file": "part_0001.cpp",
+   "line_start": 4681,
+   "line_end": 4717
+  },
+  {
+   "idx": 93,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_erase",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 4718,
+   "line_end": 4757
+  },
+  {
+   "idx": 94,
+   "name": "rea_PyModule_Create2",
+   "orig": "PyModule_Create2",
+   "file": "part_0001.cpp",
+   "line_start": 4758,
+   "line_end": 4770
+  },
+  {
+   "idx": 95,
+   "name": "rea_PyTuple_New",
+   "orig": "PyTuple_New",
+   "file": "part_0001.cpp",
+   "line_start": 4771,
+   "line_end": 4783
+  },
+  {
+   "idx": 96,
+   "name": "rea_std__filebuf__filebuf",
+   "orig": "std__filebuf__filebuf",
+   "file": "part_0001.cpp",
+   "line_start": 4784,
+   "line_end": 4796
+  },
+  {
+   "idx": 97,
+   "name": "rea_std___Rb_tree_increment",
+   "orig": "std___Rb_tree_increment",
+   "file": "part_0001.cpp",
+   "line_start": 4797,
+   "line_end": 4809
+  },
+  {
+   "idx": 98,
+   "name": "rea___cxa_end_catch",
+   "orig": "__cxa_end_catch",
+   "file": "part_0001.cpp",
+   "line_start": 4810,
+   "line_end": 4822
+  },
+  {
+   "idx": 99,
+   "name": "rea_std____throw_bad_alloc",
+   "orig": "std____throw_bad_alloc",
+   "file": "part_0001.cpp",
+   "line_start": 4823,
+   "line_end": 4835
+  },
+  {
+   "idx": 100,
+   "name": "rea_std__filebuf__dtor_filebuf",
+   "orig": "std__filebuf__dtor_filebuf",
+   "file": "part_0001.cpp",
+   "line_start": 4836,
+   "line_end": 4848
+  },
+  {
+   "idx": 101,
+   "name": "rea_PyList_SetItem",
+   "orig": "PyList_SetItem",
+   "file": "part_0001.cpp",
+   "line_start": 4849,
+   "line_end": 4861
+  },
+  {
+   "idx": 102,
+   "name": "rea___cxa_begin_catch",
+   "orig": "__cxa_begin_catch",
+   "file": "part_0001.cpp",
+   "line_start": 4862,
+   "line_end": 4874
+  },
+  {
+   "idx": 103,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_____find",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_____find",
+   "file": "part_0001.cpp",
+   "line_start": 4875,
+   "line_end": 4955
+  },
+  {
+   "idx": 104,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_hint_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 4956,
+   "line_end": 5025
+  },
+  {
+   "idx": 105,
+   "name": "rea_std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______vector",
+   "orig": "std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______vector",
+   "file": "part_0001.cpp",
+   "line_start": 5026,
+   "line_end": 5079
+  },
+  {
+   "idx": 106,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_erase",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 5080,
+   "line_end": 5127
+  },
+  {
+   "idx": 107,
+   "name": "rea_operator__new__dup2",
+   "orig": "operator_new",
+   "file": "part_0001.cpp",
+   "line_start": 5128,
+   "line_end": 5142
+  },
+  {
+   "idx": 108,
+   "name": "rea__Unwind_Resume",
+   "orig": "_Unwind_Resume",
+   "file": "part_0001.cpp",
+   "line_start": 5143,
+   "line_end": 5155
+  },
+  {
+   "idx": 109,
+   "name": "rea_dlopen",
+   "orig": "dlopen",
+   "file": "part_0001.cpp",
+   "line_start": 5156,
+   "line_end": 5168
+  },
+  {
+   "idx": 110,
+   "name": "rea_PyList_New",
+   "orig": "PyList_New",
+   "file": "part_0001.cpp",
+   "line_start": 5169,
+   "line_end": 5181
+  },
+  {
+   "idx": 111,
+   "name": "rea_PyUnicode_AsUTF8",
+   "orig": "PyUnicode_AsUTF8",
+   "file": "part_0001.cpp",
+   "line_start": 5182,
+   "line_end": 5194
+  },
+  {
+   "idx": 112,
+   "name": "rea_memcpy",
+   "orig": "memcpy",
+   "file": "part_0001.cpp",
+   "line_start": 5195,
+   "line_end": 5209
+  },
+  {
+   "idx": 113,
+   "name": "rea_std__string__append__dup2",
+   "orig": "std__string__append",
+   "file": "part_0001.cpp",
+   "line_start": 5210,
+   "line_end": 5222
+  },
+  {
+   "idx": 114,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_hint_unique_pos",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 5223,
+   "line_end": 5292
+  },
+  {
+   "idx": 115,
+   "name": "rea_SecInfo__SecInfo",
+   "orig": "SecInfo__SecInfo",
+   "file": "part_0001.cpp",
+   "line_start": 5293,
+   "line_end": 5397
+  },
+  {
+   "idx": 116,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_copy",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_copy",
+   "file": "part_0001.cpp",
+   "line_start": 5398,
+   "line_end": 5460
+  },
+  {
+   "idx": 117,
+   "name": "rea___gnu_cxx____to_xstring_std__basic_string_char__char",
+   "orig": "__gnu_cxx____to_xstring_std__basic_string_char__char",
+   "file": "part_0001.cpp",
+   "line_start": 5461,
+   "line_end": 5551
+  },
+  {
+   "idx": 118,
+   "name": "rea___gmon_start",
+   "orig": "__gmon_start__",
+   "file": "part_0001.cpp",
+   "line_start": 5552,
+   "line_end": 5564
+  },
+  {
+   "idx": 119,
+   "name": "rea___cxa_finalize",
+   "orig": "__cxa_finalize",
+   "file": "part_0001.cpp",
+   "line_start": 5565,
+   "line_end": 5577
+  },
+  {
+   "idx": 120,
+   "name": "rea_std__default_delete_SecInfo__GroupData2__operator__call",
+   "orig": "std__default_delete_SecInfo__GroupData2__operator_call___________",
+   "file": "part_0001.cpp",
+   "line_start": 5578,
+   "line_end": 5603
+  },
+  {
+   "idx": 121,
+   "name": "rea_std__default_delete_SecInfo__GroupData1__operator__call",
+   "orig": "std__default_delete_SecInfo__GroupData1__operator_call___________",
+   "file": "part_0001.cpp",
+   "line_start": 5604,
+   "line_end": 5629
+  },
+  {
+   "idx": 122,
+   "name": "rea__GLOBAL__sub_I__pypinot_cpp",
+   "orig": "_GLOBAL__sub_I__pypinot_cpp",
+   "file": "part_0001.cpp",
+   "line_start": 5630,
+   "line_end": 5673
+  },
+  {
+   "idx": 123,
+   "name": "rea_deregister_tm_clones",
+   "orig": "deregister_tm_clones",
+   "file": "part_0001.cpp",
+   "line_start": 5674,
+   "line_end": 5685
+  },
+  {
+   "idx": 124,
+   "name": "rea_register_tm_clones",
+   "orig": "register_tm_clones",
+   "file": "part_0001.cpp",
+   "line_start": 5686,
+   "line_end": 5697
+  },
+  {
+   "idx": 125,
+   "name": "rea___do_global_dtors_aux",
+   "orig": "__do_global_dtors_aux",
+   "file": "part_0001.cpp",
+   "line_start": 5698,
+   "line_end": 5716
+  },
+  {
+   "idx": 126,
+   "name": "rea_frame_dummy",
+   "orig": "frame_dummy",
+   "file": "part_0001.cpp",
+   "line_start": 5717,
+   "line_end": 5734
+  },
+  {
+   "idx": 127,
+   "name": "rea_open_file",
+   "orig": "open_file",
+   "file": "part_0001.cpp",
+   "line_start": 5735,
+   "line_end": 5849
+  },
+  {
+   "idx": 128,
+   "name": "rea_SecInfo__getPreClosePrice__dup2",
+   "orig": "SecInfo__getPreClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 5850,
+   "line_end": 5941
+  },
+  {
+   "idx": 129,
+   "name": "rea_SecInfo__getLastClosePrice__dup2",
+   "orig": "SecInfo__getLastClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 5942,
+   "line_end": 6056
+  },
+  {
+   "idx": 130,
+   "name": "rea_SecInfo__getClosePrice__dup2",
+   "orig": "SecInfo__getClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 6057,
+   "line_end": 6148
+  },
+  {
+   "idx": 131,
+   "name": "rea_SecInfo__getPreDate__dup2",
+   "orig": "SecInfo__getPreDate",
+   "file": "part_0001.cpp",
+   "line_start": 6149,
+   "line_end": 6247
+  },
+  {
+   "idx": 132,
+   "name": "rea_SecInfo__getNextDate",
+   "orig": "SecInfo__getNextDate",
+   "file": "part_0001.cpp",
+   "line_start": 6248,
+   "line_end": 6344
+  },
+  {
+   "idx": 133,
+   "name": "rea_SecInfo__getRescale__dup2",
+   "orig": "SecInfo__getRescale",
+   "file": "part_0001.cpp",
+   "line_start": 6345,
+   "line_end": 6373
+  },
+  {
+   "idx": 134,
+   "name": "rea_SecInfo__GroupsIterator__deref",
+   "orig": "SecInfo__GroupsIterator__deref",
+   "file": "part_0001.cpp",
+   "line_start": 6374,
+   "line_end": 6389
+  },
+  {
+   "idx": 135,
+   "name": "rea_SecInfo__Set_SecInfo__GroupsIterator__contains",
+   "orig": "SecInfo__Set_SecInfo__GroupsIterator__contains",
+   "file": "part_0001.cpp",
+   "line_start": 6390,
+   "line_end": 6509
+  },
+  {
+   "idx": 136,
+   "name": "rea_SecInfo__MembersIterator__deref",
+   "orig": "SecInfo__MembersIterator__deref",
+   "file": "part_0001.cpp",
+   "line_start": 6510,
+   "line_end": 6525
+  },
+  {
+   "idx": 137,
+   "name": "rea_SecInfo__MembersIterator__getForecastWeight",
+   "orig": "SecInfo__MembersIterator__getForecastWeight",
+   "file": "part_0001.cpp",
+   "line_start": 6526,
+   "line_end": 6540
+  },
+  {
+   "idx": 138,
+   "name": "rea_SecInfo__MembersIterator__getWeight",
+   "orig": "SecInfo__MembersIterator__getWeight",
+   "file": "part_0001.cpp",
+   "line_start": 6541,
+   "line_end": 6558
+  },
+  {
+   "idx": 139,
+   "name": "rea_SecInfo__Set_SecInfo__MembersIterator__contains",
+   "orig": "SecInfo__Set_SecInfo__MembersIterator__contains",
+   "file": "part_0001.cpp",
+   "line_start": 6559,
+   "line_end": 6689
+  },
+  {
+   "idx": 140,
+   "name": "rea_pinot_open__dup2",
+   "orig": "pinot_open",
+   "file": "part_0001.cpp",
+   "line_start": 6690,
+   "line_end": 6760
+  },
+  {
+   "idx": 141,
+   "name": "rea_pinot_close__dup2",
+   "orig": "pinot_close",
+   "file": "part_0001.cpp",
+   "line_start": 6761,
+   "line_end": 6789
+  },
+  {
+   "idx": 142,
+   "name": "rea_pinot_getline__dup2",
+   "orig": "pinot_getline",
+   "file": "part_0001.cpp",
+   "line_start": 6790,
+   "line_end": 6864
+  },
+  {
+   "idx": 143,
+   "name": "rea_PyInit__pypinot",
+   "orig": "PyInit__pypinot",
+   "file": "part_0001.cpp",
+   "line_start": 6865,
+   "line_end": 6879
+  },
+  {
+   "idx": 144,
+   "name": "rea_SecInfo__SecInfo__dup2",
+   "orig": "SecInfo__SecInfo",
+   "file": "part_0001.cpp",
+   "line_start": 6880,
+   "line_end": 6988
+  },
+  {
+   "idx": 145,
+   "name": "rea_SecInfo__SecInfo__dup3",
+   "orig": "SecInfo__SecInfo",
+   "file": "part_0001.cpp",
+   "line_start": 6989,
+   "line_end": 7097
+  },
+  {
+   "idx": 146,
+   "name": "rea_getPreClosePrice__dup2",
+   "orig": "getPreClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 7098,
+   "line_end": 7114
+  },
+  {
+   "idx": 147,
+   "name": "rea_getLastClosePrice__dup2",
+   "orig": "getLastClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 7115,
+   "line_end": 7131
+  },
+  {
+   "idx": 148,
+   "name": "rea_getClosePrice__dup2",
+   "orig": "getClosePrice",
+   "file": "part_0001.cpp",
+   "line_start": 7132,
+   "line_end": 7148
+  },
+  {
+   "idx": 149,
+   "name": "rea_getRescale__dup2",
+   "orig": "getRescale",
+   "file": "part_0001.cpp",
+   "line_start": 7149,
+   "line_end": 7165
+  },
+  {
+   "idx": 150,
+   "name": "rea_SecInfo__find_data2__dup2",
+   "orig": "SecInfo__find_data2",
+   "file": "part_0001.cpp",
+   "line_start": 7166,
+   "line_end": 7441
+  },
+  {
+   "idx": 151,
+   "name": "rea_SecInfo__getMarketValue",
+   "orig": "SecInfo__getMarketValue",
+   "file": "part_0001.cpp",
+   "line_start": 7442,
+   "line_end": 7507
+  },
+  {
+   "idx": 152,
+   "name": "rea_SecInfo__get30DayIntradayAmplitude",
+   "orig": "SecInfo__get30DayIntradayAmplitude",
+   "file": "part_0001.cpp",
+   "line_start": 7508,
+   "line_end": 7573
+  },
+  {
+   "idx": 153,
+   "name": "rea_SecInfo__get30DayTurnoverRate",
+   "orig": "SecInfo__get30DayTurnoverRate",
+   "file": "part_0001.cpp",
+   "line_start": 7574,
+   "line_end": 7639
+  },
+  {
+   "idx": 154,
+   "name": "rea_SecInfo__get30DayRmbVolume",
+   "orig": "SecInfo__get30DayRmbVolume",
+   "file": "part_0001.cpp",
+   "line_start": 7640,
+   "line_end": 7705
+  },
+  {
+   "idx": 155,
+   "name": "rea_SecInfo__find_group_data1__dup2",
+   "orig": "SecInfo__find_group_data1",
+   "file": "part_0001.cpp",
+   "line_start": 7706,
+   "line_end": 8012
+  },
+  {
+   "idx": 156,
+   "name": "rea_SecInfo__find_group_data2__dup2",
+   "orig": "SecInfo__find_group_data2",
+   "file": "part_0001.cpp",
+   "line_start": 8013,
+   "line_end": 8324
+  },
+  {
+   "idx": 157,
+   "name": "rea_SecInfo__getGroups",
+   "orig": "SecInfo__getGroups",
+   "file": "part_0001.cpp",
+   "line_start": 8325,
+   "line_end": 8426
+  },
+  {
+   "idx": 158,
+   "name": "rea_SecInfo__getMembers",
+   "orig": "SecInfo__getMembers",
+   "file": "part_0001.cpp",
+   "line_start": 8427,
+   "line_end": 8520
+  },
+  {
+   "idx": 159,
+   "name": "rea_PyWrapper_std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char",
+   "orig": "PyWrapper<std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char____",
+   "file": "part_0001.cpp",
+   "line_start": 8521,
+   "line_end": 9606
+  },
+  {
+   "idx": 160,
+   "name": "rea_PyWrapper_std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char__dup2",
+   "orig": "PyWrapper<std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char____",
+   "file": "part_0001.cpp",
+   "line_start": 9607,
+   "line_end": 10644
+  },
+  {
+   "idx": 161,
+   "name": "rea_std__unique_ptr_SecInfo__Data__std__default_delete_SecInfo__Data____unique_ptr",
+   "orig": "std__unique_ptr_SecInfo__Data__std__default_delete_SecInfo__Data____unique_ptr___________",
+   "file": "part_0001.cpp",
+   "line_start": 10645,
+   "line_end": 10675
+  },
+  {
+   "idx": 162,
+   "name": "rea_PyWrapper_void",
+   "orig": "PyWrapper<void*_",
+   "file": "part_0001.cpp",
+   "line_start": 10676,
+   "line_end": 10734
+  },
+  {
+   "idx": 163,
+   "name": "rea_pydetail__PyWrapper_void",
+   "orig": "pydetail__PyWrapper<void_",
+   "file": "part_0001.cpp",
+   "line_start": 10735,
+   "line_end": 10760
+  },
+  {
+   "idx": 164,
+   "name": "rea_PyWrapper_std__pair_int__std__basic_string_char__std__char_traits_char__std__allocator_char",
+   "orig": "PyWrapper<std__pair_int__std__basic_string_char__std__char_traits_char__std__allocator_char___",
+   "file": "part_0001.cpp",
+   "line_start": 10761,
+   "line_end": 10817
+  },
+  {
+   "idx": 165,
+   "name": "rea_detail__P_std__basic_string_char__std__char_traits_char__std__allocator_char____parse__dup2",
+   "orig": "detail__P_std__basic_string_char__std__char_traits_char__std__allocator_char____parse__________________",
+   "file": "part_0001.cpp",
+   "line_start": 10818,
+   "line_end": 10901
+  },
+  {
+   "idx": 166,
+   "name": "rea_std___pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char______pair__dup2",
+   "orig": "std___pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char______pair",
+   "file": "part_0001.cpp",
+   "line_start": 10902,
+   "line_end": 10974
+  },
+  {
+   "idx": 167,
+   "name": "rea_std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char_______pair__dup2",
+   "orig": "std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_std__vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_____std__basic_string_char__std__char_traits_char__std__allocator_char_______pair",
+   "file": "part_0001.cpp",
+   "line_start": 10975,
+   "line_end": 11065
+  },
+  {
+   "idx": 168,
+   "name": "rea___gnu_cxx____to_xstring_std__basic_string_char__char__dup2",
+   "orig": "__gnu_cxx____to_xstring_std__basic_string_char__char",
+   "file": "part_0001.cpp",
+   "line_start": 11066,
+   "line_end": 11157
+  },
+  {
+   "idx": 169,
+   "name": "rea_std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______vector__dup2",
+   "orig": "std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______vector",
+   "file": "part_0001.cpp",
+   "line_start": 11158,
+   "line_end": 11212
+  },
+  {
+   "idx": 170,
+   "name": "rea_std___vector_std__vector_double__std__allocator_double___std__allocator_std__vector_double__std__allocator_double_______vector__dup2",
+   "orig": "std___vector_std__vector_double__std__allocator_double___std__allocator_std__vector_double__std__allocator_double_______vector",
+   "file": "part_0001.cpp",
+   "line_start": 11213,
+   "line_end": 11250
+  },
+  {
+   "idx": 171,
+   "name": "rea_IndexedData_GIDKey__Item__free__dup2",
+   "orig": "IndexedData_GIDKey__Item__free",
+   "file": "part_0001.cpp",
+   "line_start": 11251,
+   "line_end": 11272
+  },
+  {
+   "idx": 172,
+   "name": "rea_PyWrapper_double",
+   "orig": "PyWrapper<double_",
+   "file": "part_0001.cpp",
+   "line_start": 11273,
+   "line_end": 11345
+  },
+  {
+   "idx": 173,
+   "name": "rea_PyWrapper_double__dup2",
+   "orig": "PyWrapper<double_",
+   "file": "part_0001.cpp",
+   "line_start": 11346,
+   "line_end": 11418
+  },
+  {
+   "idx": 174,
+   "name": "rea_PyWrapper_double__dup3",
+   "orig": "PyWrapper<double_",
+   "file": "part_0001.cpp",
+   "line_start": 11419,
+   "line_end": 11491
+  },
+  {
+   "idx": 175,
+   "name": "rea_PyWrapper_double__dup4",
+   "orig": "PyWrapper<double_",
+   "file": "part_0001.cpp",
+   "line_start": 11492,
+   "line_end": 11564
+  },
+  {
+   "idx": 176,
+   "name": "rea_IndexedData_GIDKey__Item2__free__dup2",
+   "orig": "IndexedData_GIDKey__Item2__free",
+   "file": "part_0001.cpp",
+   "line_start": 11565,
+   "line_end": 11586
+  },
+  {
+   "idx": 177,
+   "name": "rea_IndexedData_GroupKey__GroupForwardItem__free__dup2",
+   "orig": "IndexedData_GroupKey__GroupForwardItem__free",
+   "file": "part_0001.cpp",
+   "line_start": 11587,
+   "line_end": 11608
+  },
+  {
+   "idx": 178,
+   "name": "rea_IndexedData_GIDKey__GroupBackwardItem__free__dup2",
+   "orig": "IndexedData_GIDKey__GroupBackwardItem__free",
+   "file": "part_0001.cpp",
+   "line_start": 11609,
+   "line_end": 11630
+  },
+  {
+   "idx": 179,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_______find__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_______find",
+   "file": "part_0001.cpp",
+   "line_start": 11631,
+   "line_end": 11668
+  },
+  {
+   "idx": 180,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_erase__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 11669,
+   "line_end": 11717
+  },
+  {
+   "idx": 181,
+   "name": "rea_std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______M_emplace_back_aux_const_std__basic_string_char__std__char_traits_char__std__allocator_char__dup2",
+   "orig": "std___vector_std__basic_string_char__std__char_traits_char__std__allocator_char___std__allocator_std__basic_string_char__std__char_traits_char__std__allocator_char_______M_emplace_back_aux_const_std__basic_string_char__std__char_traits_char__std__allocator_char_____________",
+   "file": "part_0001.cpp",
+   "line_start": 11718,
+   "line_end": 11853
+  },
+  {
+   "idx": 182,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_erase__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 11854,
+   "line_end": 11896
+  },
+  {
+   "idx": 183,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_____find__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_____find",
+   "file": "part_0001.cpp",
+   "line_start": 11897,
+   "line_end": 11988
+  },
+  {
+   "idx": 184,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_erase__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 11989,
+   "line_end": 12028
+  },
+  {
+   "idx": 185,
+   "name": "rea_std___map_int__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________map",
+   "orig": "std___map_int__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________map",
+   "file": "part_0001.cpp",
+   "line_start": 12029,
+   "line_end": 12041
+  },
+  {
+   "idx": 186,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12042,
+   "line_end": 12098
+  },
+  {
+   "idx": 187,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_insert_node__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 12099,
+   "line_end": 12125
+  },
+  {
+   "idx": 188,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_hint_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__Data2__std__default_delete_SecInfo__Data2________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12126,
+   "line_end": 12198
+  },
+  {
+   "idx": 189,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12199,
+   "line_end": 12255
+  },
+  {
+   "idx": 190,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_insert_node__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 12256,
+   "line_end": 12282
+  },
+  {
+   "idx": 191,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____________",
+   "file": "part_0001.cpp",
+   "line_start": 12283,
+   "line_end": 12351
+  },
+  {
+   "idx": 192,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12352,
+   "line_end": 12408
+  },
+  {
+   "idx": 193,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_insert_node__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_insert_node",
+   "file": "part_0001.cpp",
+   "line_start": 12409,
+   "line_end": 12435
+  },
+  {
+   "idx": 194,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_________M_emplace_unique_int___std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____________",
+   "file": "part_0001.cpp",
+   "line_start": 12436,
+   "line_end": 12504
+  },
+  {
+   "idx": 195,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_hint_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12505,
+   "line_end": 12577
+  },
+  {
+   "idx": 196,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_hint_unique_pos__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_get_insert_hint_unique_pos___________",
+   "file": "part_0001.cpp",
+   "line_start": 12578,
+   "line_end": 12650
+  },
+  {
+   "idx": 197,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_erase__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 12651,
+   "line_end": 12691
+  },
+  {
+   "idx": 198,
+   "name": "rea_std___map_int__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________map",
+   "orig": "std___map_int__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData1__std__default_delete_SecInfo__GroupData1________map",
+   "file": "part_0001.cpp",
+   "line_start": 12692,
+   "line_end": 12704
+  },
+  {
+   "idx": 199,
+   "name": "rea_std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_erase__dup2",
+   "orig": "std____Rb_tree_int__std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2____std___Select1st_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2_____std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________M_erase",
+   "file": "part_0001.cpp",
+   "line_start": 12705,
+   "line_end": 12745
+  },
+  {
+   "idx": 200,
+   "name": "rea_std___map_int__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________map",
+   "orig": "std___map_int__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2___std__less_int__std__allocator_std__pair_int_const__std__unique_ptr_SecInfo__GroupData2__std__default_delete_SecInfo__GroupData2________map",
+   "file": "part_0002.cpp",
+   "line_start": 3,
+   "line_end": 15
+  },
+  {
+   "idx": 201,
+   "name": "rea_std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______pair__dup2",
+   "orig": "std___pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______pair",
+   "file": "part_0002.cpp",
+   "line_start": 16,
+   "line_end": 54
+  },
+  {
+   "idx": 202,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_unique_pos__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_unique_pos___________",
+   "file": "part_0002.cpp",
+   "line_start": 55,
+   "line_end": 169
+  },
+  {
+   "idx": 203,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_hint_unique_pos__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_get_insert_hint_unique_pos___________",
+   "file": "part_0002.cpp",
+   "line_start": 170,
+   "line_end": 352
+  },
+  {
+   "idx": 204,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_______M_emplace_hint_unique_const_std__piecewise_construct_t___std__tuple_const_std__basic_string_char__std__char_traits_char__std__allocator_char____std__tuple__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double_______M_emplace_hint_unique_const_std__piecewise_construct_t___std__tuple_const_std__basic_string_char__std__char_traits_char__std__allocator_char____std__tuple_____________",
+   "file": "part_0002.cpp",
+   "line_start": 353,
+   "line_end": 452
+  },
+  {
+   "idx": 205,
+   "name": "rea_std__vector_double__std__allocator_double___operator__assign__dup2",
+   "orig": "std__vector_double__std__allocator_double___operator_assign___________",
+   "file": "part_0002.cpp",
+   "line_start": 453,
+   "line_end": 703
+  },
+  {
+   "idx": 206,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_copy__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_copy",
+   "file": "part_0002.cpp",
+   "line_start": 704,
+   "line_end": 867
+  },
+  {
+   "idx": 207,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_copy__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_copy",
+   "file": "part_0002.cpp",
+   "line_start": 868,
+   "line_end": 934
+  },
+  {
+   "idx": 208,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_insert__const_std__pair_std__basic_string_char__std__vector_double__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double____std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double________M_insert__const_std__pair_std__basic_string_char__std__vector_double_____________",
+   "file": "part_0002.cpp",
+   "line_start": 935,
+   "line_end": 1034
+  },
+  {
+   "idx": 209,
+   "name": "rea_std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_insert__const_std__pair_std__basic_string_char__double__dup2",
+   "orig": "std____Rb_tree_std__basic_string_char__std__char_traits_char__std__allocator_char___std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std___Select1st_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double______M_insert__const_std__pair_std__basic_string_char__double____________",
+   "file": "part_0002.cpp",
+   "line_start": 1035,
+   "line_end": 1095
+  },
+  {
+   "idx": 210,
+   "name": "rea__Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double____std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___double___M___parse__dup2",
+   "orig": "_Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___double__std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___double____std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___double___M___parse",
+   "file": "part_0002.cpp",
+   "line_start": 1096,
+   "line_end": 1340
+  },
+  {
+   "idx": 211,
+   "name": "rea_std__vector_double__std__allocator_double____M_emplace_back_aux_double_const__dup2",
+   "orig": "std__vector_double__std__allocator_double____M_emplace_back_aux_double_const____________",
+   "file": "part_0002.cpp",
+   "line_start": 1341,
+   "line_end": 1399
+  },
+  {
+   "idx": 212,
+   "name": "rea__Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____M___parse__dup2",
+   "orig": "_Pv_std__map_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double___std__less_std__basic_string_char__std__char_traits_char__std__allocator_char____std__allocator_std__pair_const_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double______std__pair_std__basic_string_char__std__char_traits_char__std__allocator_char___std__vector_double__std__allocator_double_____M___parse",
+   "file": "part_0002.cpp",
+   "line_start": 1400,
+   "line_end": 1828
+  },
+  {
+   "idx": 213,
+   "name": "rea__fini",
+   "orig": "_fini",
+   "file": "part_0002.cpp",
+   "line_start": 1829,
+   "line_end": 1840
+  },
+  {
+   "idx": 214,
+   "name": "rea_std__string__append__dup3",
+   "orig": "std__string__append",
+   "file": "part_0002.cpp",
+   "line_start": 1841,
+   "line_end": 1854
+  },
+  {
+   "idx": 215,
+   "name": "rea_std__getline_char_std__char_traits_char_std__allocator_char__dup2",
+   "orig": "std__getline_char_std__char_traits_char_std__allocator_char",
+   "file": "part_0002.cpp",
+   "line_start": 1855,
+   "line_end": 1869
+  },
+  {
+   "idx": 216,
+   "name": "rea_std____throw_bad_cast__dup2",
+   "orig": "std____throw_bad_cast",
+   "file": "part_0002.cpp",
+   "line_start": 1870,
+   "line_end": 1883
+  },
+  {
+   "idx": 217,
+   "name": "rea_PyLong_FromVoidPtr__dup2",
+   "orig": "PyLong_FromVoidPtr",
+   "file": "part_0002.cpp",
+   "line_start": 1884,
+   "line_end": 1896
+  },
+  {
+   "idx": 218,
+   "name": "rea_std__ios_base__ios_base__dup2",
+   "orig": "std__ios_base__ios_base",
+   "file": "part_0002.cpp",
+   "line_start": 1897,
+   "line_end": 1910
+  },
+  {
+   "idx": 219,
+   "name": "rea_PyLong_AsVoidPtr__dup2",
+   "orig": "PyLong_AsVoidPtr",
+   "file": "part_0002.cpp",
+   "line_start": 1911,
+   "line_end": 1923
+  },
+  {
+   "idx": 220,
+   "name": "rea_std__string__string__dup4",
+   "orig": "std__string__string",
+   "file": "part_0002.cpp",
+   "line_start": 1924,
+   "line_end": 1937
+  },
+  {
+   "idx": 221,
+   "name": "rea___gmon_start__dup2",
+   "orig": "__gmon_start__",
+   "file": "part_0002.cpp",
+   "line_start": 1938,
+   "line_end": 1950
+  },
+  {
+   "idx": 222,
+   "name": "rea__Jv_RegisterClasses",
+   "orig": "_Jv_RegisterClasses",
+   "file": "part_0002.cpp",
+   "line_start": 1951,
+   "line_end": 1963
+  },
+  {
+   "idx": 223,
+   "name": "rea_operator__new__dup3",
+   "orig": "operator_new__",
+   "file": "part_0002.cpp",
+   "line_start": 1964,
+   "line_end": 1977
+  },
+  {
+   "idx": 224,
+   "name": "rea_operator__delete__dup3",
+   "orig": "operator_delete",
+   "file": "part_0002.cpp",
+   "line_start": 1978,
+   "line_end": 1991
+  },
+  {
+   "idx": 225,
+   "name": "rea_std__string__reserve__dup2",
+   "orig": "std__string__reserve",
+   "file": "part_0002.cpp",
+   "line_start": 1992,
+   "line_end": 2005
+  },
+  {
+   "idx": 226,
+   "name": "rea_std__string___Rep___M_dispose__dup2",
+   "orig": "std__string___Rep___M_dispose",
+   "file": "part_0002.cpp",
+   "line_start": 2006,
+   "line_end": 2019
+  },
+  {
+   "idx": 227,
+   "name": "rea_PyBytes_Size__dup2",
+   "orig": "PyBytes_Size",
+   "file": "part_0002.cpp",
+   "line_start": 2020,
+   "line_end": 2032
+  },
+  {
+   "idx": 228,
+   "name": "rea_std__ctype_char___M_widen_init__dup2",
+   "orig": "std__ctype_char___M_widen_init",
+   "file": "part_0002.cpp",
+   "line_start": 2033,
+   "line_end": 2046
+  },
+  {
+   "idx": 229,
+   "name": "rea___cxa_rethrow__dup2",
+   "orig": "__cxa_rethrow",
+   "file": "part_0002.cpp",
+   "line_start": 2047,
+   "line_end": 2060
+  },
+  {
+   "idx": 230,
+   "name": "rea_fopen__dup2",
+   "orig": "fopen",
+   "file": "part_0002.cpp",
+   "line_start": 2061,
+   "line_end": 2074
+  },
+  {
+   "idx": 231,
+   "name": "rea_std___Rb_tree_decrement__dup2",
+   "orig": "std___Rb_tree_decrement",
+   "file": "part_0002.cpp",
+   "line_start": 2075,
+   "line_end": 2088
+  },
+  {
+   "idx": 232,
+   "name": "rea_std__string___Rep___S_create__dup2",
+   "orig": "std__string___Rep___S_create",
+   "file": "part_0002.cpp",
+   "line_start": 2089,
+   "line_end": 2102
+  },
+  {
+   "idx": 233,
+   "name": "rea_std__string__string__dup5",
+   "orig": "std__string__string",
+   "file": "part_0002.cpp",
+   "line_start": 2103,
+   "line_end": 2116
+  },
+  {
+   "idx": 234,
+   "name": "rea___cxa_atexit__dup2",
+   "orig": "__cxa_atexit",
+   "file": "part_0002.cpp",
+   "line_start": 2117,
+   "line_end": 2130
+  },
+  {
+   "idx": 235,
+   "name": "rea_dlsym__dup2",
+   "orig": "dlsym",
+   "file": "part_0002.cpp",
+   "line_start": 2131,
+   "line_end": 2143
+  },
+  {
+   "idx": 236,
+   "name": "rea_std__filebuf__open__dup2",
+   "orig": "std__filebuf__open",
+   "file": "part_0002.cpp",
+   "line_start": 2144,
+   "line_end": 2158
+  },
+  {
+   "idx": 237,
+   "name": "rea_PyLong_AsLong__dup2",
+   "orig": "PyLong_AsLong",
+   "file": "part_0002.cpp",
+   "line_start": 2159,
+   "line_end": 2171
+  },
+  {
+   "idx": 238,
+   "name": "rea__ITM_deregisterTMCloneTable",
+   "orig": "_ITM_deregisterTMCloneTable",
+   "file": "part_0002.cpp",
+   "line_start": 2172,
+   "line_end": 2184
+  },
+  {
+   "idx": 239,
+   "name": "rea_PyArg_ParseTuple__dup2",
+   "orig": "PyArg_ParseTuple",
+   "file": "part_0002.cpp",
+   "line_start": 2185,
+   "line_end": 2197
+  },
+  {
+   "idx": 240,
+   "name": "rea__ITM_registerTMCloneTable",
+   "orig": "_ITM_registerTMCloneTable",
+   "file": "part_0002.cpp",
+   "line_start": 2198,
+   "line_end": 2210
+  },
+  {
+   "idx": 241,
+   "name": "rea_std__string___Rep___M_destroy__dup2",
+   "orig": "std__string___Rep___M_destroy",
+   "file": "part_0002.cpp",
+   "line_start": 2211,
+   "line_end": 2224
+  },
+  {
+   "idx": 242,
+   "name": "rea___cxa_finalize__dup2",
+   "orig": "__cxa_finalize",
+   "file": "part_0002.cpp",
+   "line_start": 2225,
+   "line_end": 2238
+  },
+  {
+   "idx": 243,
+   "name": "rea_PyBytes_AsString__dup2",
+   "orig": "PyBytes_AsString",
+   "file": "part_0002.cpp",
+   "line_start": 2239,
+   "line_end": 2251
+  },
+  {
+   "idx": 244,
+   "name": "rea_std__string__insert__dup2",
+   "orig": "std__string__insert",
+   "file": "part_0002.cpp",
+   "line_start": 2252,
+   "line_end": 2265
+  },
+  {
+   "idx": 245,
+   "name": "rea_std__string__string__dup6",
+   "orig": "std__string__string",
+   "file": "part_0002.cpp",
+   "line_start": 2266,
+   "line_end": 2279
+  },
+  {
+   "idx": 246,
+   "name": "rea_std__string__find__dup2",
+   "orig": "std__string__find",
+   "file": "part_0002.cpp",
+   "line_start": 2280,
+   "line_end": 2293
+  },
+  {
+   "idx": 247,
+   "name": "rea_memmove__dup2",
+   "orig": "memmove",
+   "file": "part_0002.cpp",
+   "line_start": 2294,
+   "line_end": 2307
+  },
+  {
+   "idx": 248,
+   "name": "rea_vsnprintf",
+   "orig": "vsnprintf",
+   "file": "part_0002.cpp",
+   "line_start": 2308,
+   "line_end": 2321
+  },
+  {
+   "idx": 249,
+   "name": "rea_fread__dup2",
+   "orig": "fread",
+   "file": "part_0002.cpp",
+   "line_start": 2322,
+   "line_end": 2335
+  },
+  {
+   "idx": 250,
+   "name": "rea_getenv__dup2",
+   "orig": "getenv",
+   "file": "part_0002.cpp",
+   "line_start": 2336,
+   "line_end": 2349
+  },
+  {
+   "idx": 251,
+   "name": "rea_std__ios__init__dup2",
+   "orig": "std__ios__init",
+   "file": "part_0002.cpp",
+   "line_start": 2350,
+   "line_end": 2364
+  },
+  {
+   "idx": 252,
+   "name": "rea_Py_BuildValue__dup2",
+   "orig": "Py_BuildValue",
+   "file": "part_0002.cpp",
+   "line_start": 2365,
+   "line_end": 2377
+  },
+  {
+   "idx": 253,
+   "name": "rea_std___Rb_tree_insert_and_rebalance__dup2",
+   "orig": "std___Rb_tree_insert_and_rebalance________________",
+   "file": "part_0002.cpp",
+   "line_start": 2378,
+   "line_end": 2392
+  },
+  {
+   "idx": 254,
+   "name": "rea_std__ios_base__dtor_ios_base__dup2",
+   "orig": "std__ios_base__dtor_ios_base",
+   "file": "part_0002.cpp",
+   "line_start": 2393,
+   "line_end": 2406
+  },
+  {
+   "idx": 255,
+   "name": "rea_strcmp__dup2",
+   "orig": "strcmp",
+   "file": "part_0002.cpp",
+   "line_start": 2407,
+   "line_end": 2420
+  },
+  {
+   "idx": 256,
+   "name": "rea_PyBytes_FromStringAndSize__dup2",
+   "orig": "PyBytes_FromStringAndSize",
+   "file": "part_0002.cpp",
+   "line_start": 2421,
+   "line_end": 2433
+  },
+  {
+   "idx": 257,
+   "name": "rea_strcpy__dup2",
+   "orig": "strcpy",
+   "file": "part_0002.cpp",
+   "line_start": 2434,
+   "line_end": 2447
+  },
+  {
+   "idx": 258,
+   "name": "rea_std__string__assign__dup2",
+   "orig": "std__string__assign",
+   "file": "part_0002.cpp",
+   "line_start": 2448,
+   "line_end": 2461
+  },
+  {
+   "idx": 259,
+   "name": "rea_operator__delete__dup4",
+   "orig": "operator_delete__",
+   "file": "part_0002.cpp",
+   "line_start": 2462,
+   "line_end": 2475
+  },
+  {
+   "idx": 260,
+   "name": "rea_memcmp__dup2",
+   "orig": "memcmp",
+   "file": "part_0002.cpp",
+   "line_start": 2476,
+   "line_end": 2489
+  },
+  {
+   "idx": 261,
+   "name": "rea_std__ios__clear__dup2",
+   "orig": "std__ios__clear",
+   "file": "part_0002.cpp",
+   "line_start": 2490,
+   "line_end": 2503
+  },
+  {
+   "idx": 262,
+   "name": "rea_fclose__dup2",
+   "orig": "fclose",
+   "file": "part_0002.cpp",
+   "line_start": 2504,
+   "line_end": 2517
+  },
+  {
+   "idx": 263,
+   "name": "rea_PyModule_Create2__dup2",
+   "orig": "PyModule_Create2",
+   "file": "part_0002.cpp",
+   "line_start": 2518,
+   "line_end": 2530
+  },
+  {
+   "idx": 264,
+   "name": "rea_PyTuple_New__dup2",
+   "orig": "PyTuple_New",
+   "file": "part_0002.cpp",
+   "line_start": 2531,
+   "line_end": 2543
+  },
+  {
+   "idx": 265,
+   "name": "rea_std__filebuf__filebuf__dup2",
+   "orig": "std__filebuf__filebuf",
+   "file": "part_0002.cpp",
+   "line_start": 2544,
+   "line_end": 2557
+  },
+  {
+   "idx": 266,
+   "name": "rea_std___Rb_tree_increment__dup2",
+   "orig": "std___Rb_tree_increment",
+   "file": "part_0002.cpp",
+   "line_start": 2558,
+   "line_end": 2571
+  },
+  {
+   "idx": 267,
+   "name": "rea___cxa_end_catch__dup2",
+   "orig": "__cxa_end_catch",
+   "file": "part_0002.cpp",
+   "line_start": 2572,
+   "line_end": 2585
+  },
+  {
+   "idx": 268,
+   "name": "rea_std____throw_bad_alloc__dup2",
+   "orig": "std____throw_bad_alloc",
+   "file": "part_0002.cpp",
+   "line_start": 2586,
+   "line_end": 2599
+  },
+  {
+   "idx": 269,
+   "name": "rea_std__filebuf__dtor_filebuf__dup2",
+   "orig": "std__filebuf__dtor_filebuf",
+   "file": "part_0002.cpp",
+   "line_start": 2600,
+   "line_end": 2613
+  },
+  {
+   "idx": 270,
+   "name": "rea_PyList_SetItem__dup2",
+   "orig": "PyList_SetItem",
+   "file": "part_0002.cpp",
+   "line_start": 2614,
+   "line_end": 2626
+  },
+  {
+   "idx": 271,
+   "name": "rea___cxa_begin_catch__dup2",
+   "orig": "__cxa_begin_catch",
+   "file": "part_0002.cpp",
+   "line_start": 2627,
+   "line_end": 2640
+  },
+  {
+   "idx": 272,
+   "name": "rea___gxx_personality_v0",
+   "orig": "__gxx_personality_v0",
+   "file": "part_0002.cpp",
+   "line_start": 2641,
+   "line_end": 2654
+  },
+  {
+   "idx": 273,
+   "name": "rea_operator__new__dup4",
+   "orig": "operator_new",
+   "file": "part_0002.cpp",
+   "line_start": 2655,
+   "line_end": 2668
+  },
+  {
+   "idx": 274,
+   "name": "rea__Unwind_Resume__dup2",
+   "orig": "_Unwind_Resume",
+   "file": "part_0002.cpp",
+   "line_start": 2669,
+   "line_end": 2682
+  },
+  {
+   "idx": 275,
+   "name": "rea_dlopen__dup2",
+   "orig": "dlopen",
+   "file": "part_0002.cpp",
+   "line_start": 2683,
+   "line_end": 2695
+  },
+  {
+   "idx": 276,
+   "name": "rea_PyList_New__dup2",
+   "orig": "PyList_New",
+   "file": "part_0002.cpp",
+   "line_start": 2696,
+   "line_end": 2708
+  },
+  {
+   "idx": 277,
+   "name": "rea_PyUnicode_AsUTF8__dup2",
+   "orig": "PyUnicode_AsUTF8",
+   "file": "part_0002.cpp",
+   "line_start": 2709,
+   "line_end": 2721
+  },
+  {
+   "idx": 278,
+   "name": "rea_memcpy__dup2",
+   "orig": "memcpy",
+   "file": "part_0002.cpp",
+   "line_start": 2722,
+   "line_end": 2735
+  },
+  {
+   "idx": 279,
+   "name": "rea_std__string__append__dup4",
+   "orig": "std__string__append",
+   "file": "part_0002.cpp",
+   "line_start": 2736,
+   "line_end": 2749
+  }
+ ],
+ "files": [
+  "D:\\tmp\\cppgen\\H0PP\\H0PP_shim.hpp",
+  "D:\\tmp\\cppgen\\H0PP\\H0PP_compilable.cpp",
+  "D:\\tmp\\cppgen\\H0PP\\H0PP_tu"
+ ]
+}
