@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "pinot_close",
+  "address": "0x0010c090",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-pinot_close-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 163,
+    "address": "0x0010c090",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_pinot_close(void)\n{\n  ...\n  PyArg_ParseTuple(args, \"O\", &p_var0);\n  ...\n  /* Clean up handle: free memory, close filebuf, etc. */\n  ...\n  return Py_BuildValue(\"z\", 0);\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper that closes a Pinot reader handle. Takes one argument (the handle from pinot_open), frees associated resources, and returns None.",
+    "semantic_contract": "pinot_close(handle: int) -> None",
+    "behavioral_notes": "1) Takes a single Python object argument (the handle int from pinot_open) via PyArg_ParseTuple format \"O\". 2) Converts handle back to void*. 3) Frees the handle memory (operator_delete). 4) Closes any filebuf/ifstream resources. 5) Returns None via Py_BuildValue(\"z\", 0) using format char at S_0010fbf2. 6) No Python call site found in __init__.py — unknown callers.",
+    "side_effects": [
+      "Frees handle memory via operator_delete",
+      "Closes filebuf/ifstream resources if fallback was used"
+    ]
+  },
+  "claims": [
+    {
+      "id": "H0PP-pinot_close-001-A",
+      "kind": "contract",
+      "statement": "Input: single argument (handle int from pinot_open). Output: None.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:163 (wrapper at 0x0010c090; PyArg_ParseTuple format \"O\"; returns Py_BuildValue(\"z\", 0))"
+    },
+    {
+      "id": "H0PP-pinot_close-001-B",
+      "kind": "implementation",
+      "statement": "Frees handle memory via operator_delete and closes associated resources.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:163 (cleanup path: operator_delete, filebuf close)"
+    },
+    {
+      "id": "H0PP-pinot_close-001-C",
+      "kind": "data",
+      "statement": "Return value is None via Py_BuildValue(\"z\", 0) using format char at S_0010fbf2.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:163 + semantic/api/strings.tsv (S_0010fbf2 = \"z\")"
+    },
+    {
+      "id": "H0PP-pinot_close-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with error set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:163 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-pinot_close-001-E",
+      "kind": "side_effect",
+      "statement": "Frees handle memory and closes filebuf/ifstream resources.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:163 (operator_delete and resource cleanup)"
+    },
+    {
+      "id": "H0PP-pinot_close-001-F",
+      "kind": "contract",
+      "statement": "No Python call site found in __init__.py for pinot_close; callers are unknown.",
+      "authority": "inferred",
+      "verifier": "source_audit",
+      "status": "pass",
+      "source": "semantic/python_side/__init__.py (no reference to pinot_close)"
+    }
+  ]
+}

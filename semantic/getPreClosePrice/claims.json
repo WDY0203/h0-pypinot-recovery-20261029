@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "getPreClosePrice",
+  "address": "0x0010c7c0",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-getPreClosePrice-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 172,
+    "address": "0x0010c7c0",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_getPreClosePrice(void)\n{\n  ...\n  if (p_var1 != (PyObject *)0x0) {\n    iVar1 = PyLong_AsLong(p_var1);\n    ...\n    dVar2 = H0PP_getPreClosePrice(&local_stack_0x28, iVar1, p_var0);\n    ...\n    uVar3 = Py_BuildValue(\"d\", dVar2);\n  }\n  return uVar3;\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper around free function H0PP_getPreClosePrice. Takes (symbol:str, date:int), creates a stack SecInfo, and returns the pre-close price as a Python float.",
+    "semantic_contract": "getPreClosePrice(symbol: str, date: int) -> float | None",
+    "behavioral_notes": "1) First argument is a symbol name (Python str or bytes) converted to C char*. 2) Second argument is a date encoded as int via PyLong_AsLong. 3) On PyArg_ParseTuple failure, returns NULL with error set. 4) Underlying free function creates a stack SecInfo and delegates to SecInfo::getPreClosePrice. 5) Return value built via Py_BuildValue(\"d\", double) using S_0010fc04.",
+    "side_effects": [
+      "libpinot_reader.so is dlopened during PIN_CALLBACK handler init",
+      "Handler resets qword at SecInfo+0x28 (price callback slot)"
+    ]
+  },
+  "claims": [
+    {
+      "id": "H0PP-getPreClosePrice-001-A",
+      "kind": "contract",
+      "statement": "Inputs: (symbol: str, date: int). Output: pre-close price as float, or None on parse failure.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 (wrapper at 0x0010c7c0; PyArg_ParseTuple format S_0010fc03=\"OO\"; Py_BuildValue format S_0010fc04=\"d\"; PyLong_AsLong for second arg)"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-B",
+      "kind": "contract",
+      "statement": "Symbol argument accepts Python str (UTF-8 converted) or bytes; date argument is Python int via PyLong_AsLong.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 (wrapper checks PyBytes/PyUnicode types, calls PyUnicode_AsUTF8String or PyBytes_AsString)"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-C",
+      "kind": "implementation",
+      "statement": "Wrapper calls free function H0PP_getPreClosePrice (0x0010b980), which constructs a stack SecInfo and delegates to SecInfo::getPreClosePrice method.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 wrapper + free function body at 0x0010b980 (creates SecInfo local_stack_0x28, calls method)"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with TypeError/ValueError set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-E",
+      "kind": "data",
+      "statement": "Return value is a Python float built via Py_BuildValue(\"d\", double) using format char at S_0010fc04.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 + semantic/api/strings.tsv (S_0010fc04 = \"d\")"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-F",
+      "kind": "side_effect",
+      "statement": "libpinot_reader.so is dlopened during PIN_CALLBACK handler init; handler resets price callback slot at SecInfo+0x28.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 (PIN_CALLBACK handler at 0x0010bf40 sets qword at addr+0x28)"
+    },
+    {
+      "id": "H0PP-getPreClosePrice-001-G",
+      "kind": "data",
+      "statement": "Underlying free function returns -1.0 (double) on failure/invalid date path.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:172 + free function at 0x0010b980 (returns -1.0 sentinel on invalid date)"
+    }
+  ]
+}

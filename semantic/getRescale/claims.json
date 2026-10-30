@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "getRescale",
+  "address": "0x0010cc10",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-getRescale-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 175,
+    "address": "0x0010cc10",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_getRescale(void)\n{\n  int64_t iVar1;\n  double dVar2;\n  undefined8 uVar3;\n  PyObject *p_var0;\n  PyObject *p_var1;\n  ...\n  if (p_var1 != (PyObject *)0x0) {\n    iVar1 = PyLong_AsLong(p_var1);\n    ...\n    SecInfo local_stack_0x28;\n    dVar2 = H0PP_getRescale(local_stack_0x28, iVar1, p_var0);\n    ...\n    uVar3 = Py_BuildValue(\"d\", dVar2);\n  }\n  return uVar3;\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper around free function H0PP_getRescale. Takes (symbol:str, date:int), creates a stack SecInfo, and returns the rescale ratio as a Python float. Parse failure returns NULL (Python None after CPython error).",
+    "semantic_contract": "getRescale(symbol: str, date: int) -> float | None",
+    "behavioral_notes": "1) First argument is a symbol name (Python str or bytes) converted to C char* via PyUnicode_AsUTF8String or PyBytes_AsString. 2) Second argument is a date encoded as int via PyLong_AsLong. 3) On PyArg_ParseTuple failure, returns NULL with an error set. 4) Underlying free function creates a stack SecInfo and delegates to SecInfo::getRescale (method at 0x0010b790). 5) Return value is built with Py_BuildValue(\"d\", double) using format string at S_0010fc04. 6) The free function returns 1.0 on the failure path (DAT_0010fd18 = 1.0), which is also the mathematical identity for ratio.",
+    "side_effects": [
+      "libpinot_reader.so is dlopened during PIN_CALLBACK handler init; handler resets qword at SecInfo+0x28 (price callback slot)",
+      "Uses PIN_Abort on unresolved symbol addresses during initialization"
+    ]
+  },
+  "claims": [
+    {
+      "id": "H0PP-getRescale-001-A",
+      "kind": "contract",
+      "statement": "Inputs: (symbol: str, date: int). Output: rescale ratio as float, or None on parse failure.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 (H0PP_getRescale wrapper at 0x0010cc10; PyArg_ParseTuple format S_0010fc03=\"OO\"; Py_BuildValue format S_0010fc04=\"d\"; PyLong_AsLong for second arg)"
+    },
+    {
+      "id": "H0PP-getRescale-001-B",
+      "kind": "contract",
+      "statement": "Symbol argument accepts Python str (UTF-8 converted) or bytes; date argument is Python int via PyLong_AsLong.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 (wrapper checks PyBytes/PyUnicode types, calls PyUnicode_AsUTF8String or PyBytes_AsString)"
+    },
+    {
+      "id": "H0PP-getRescale-001-C",
+      "kind": "implementation",
+      "statement": "Wrapper calls free function H0PP_getRescale (address 0x0010b780), which constructs a stack SecInfo and delegates to SecInfo::getRescale method.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 wrapper + free function body at 0x0010b780 (creates SecInfo local_stack_0x28, calls method at 0x0010b790)"
+    },
+    {
+      "id": "H0PP-getRescale-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with TypeError/ValueError set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-getRescale-001-E",
+      "kind": "data",
+      "statement": "Return value is a Python float built via Py_BuildValue(\"d\", double) using format char at S_0010fc04.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 + semantic/api/strings.tsv (S_0010fc04 = \"d\")"
+    },
+    {
+      "id": "H0PP-getRescale-001-F",
+      "kind": "side_effect",
+      "statement": "libpinot_reader.so is dlopened during PIN_CALLBACK handler init; handler resets price callback slot at SecInfo+0x28.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 (PIN_CALLBACK handler at 0x0010bf40 references DAT_0010fd18 and sets qword at addr+0x28)"
+    },
+    {
+      "id": "H0PP-getRescale-001-G",
+      "kind": "data",
+      "statement": "Underlying free function returns 1.0 (double) on failure path, loaded from DAT_0010fd18.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:175 + free function at 0x0010b780 (DAT_0010fd18 = 1.0 used as default/identity value)"
+    }
+  ]
+}

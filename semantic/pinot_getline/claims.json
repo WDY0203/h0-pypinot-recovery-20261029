@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "pinot_getline",
+  "address": "0x0010c0e0",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-pinot_getline-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 164,
+    "address": "0x0010c0e0",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_pinot_getline(void)\n{\n  ...\n  PyArg_ParseTuple(args, \"O\", &p_var0);\n  ...\n  /* Read a line from binary stream */\n  ...\n  /* Return (int success_flag, bytes line_data) */\n  ...\n  return PyTuple_Pack(2, iVar1, p_var2);\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper that reads a line from a Pinot binary stream. Takes one argument (a stream/handle), reads a line, and returns a tuple (success_flag: int, line_data: bytes).",
+    "semantic_contract": "pinot_getline(stream: int) -> tuple[int, bytes]",
+    "behavioral_notes": "1) Takes a single Python object argument (stream handle) via PyArg_ParseTuple format \"O\". 2) Converts handle to stream pointer. 3) Reads a line from the binary stream. 4) Returns a 2-element tuple: (int success_flag, bytes line_data). 5) The int success flag is a bool (0/1) built via PyLong_FromLong using format char at S_0010fbf4. 6) No Python call site found in __init__.py — unknown callers.",
+    "side_effects": [
+      "Reads from binary stream (advances stream position)"
+    ]
+  },
+  "claims": [
+    {
+      "id": "H0PP-pinot_getline-001-A",
+      "kind": "contract",
+      "statement": "Input: single argument (stream handle). Output: tuple (int success_flag, bytes line_data).",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:164 (wrapper at 0x0010c0e0; PyArg_ParseTuple format \"O\"; returns PyTuple_Pack(2, int, bytes))"
+    },
+    {
+      "id": "H0PP-pinot_getline-001-B",
+      "kind": "implementation",
+      "statement": "Reads a line from the binary stream and constructs a 2-tuple (success_flag, line_data).",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:164 (reads line, packs tuple with PyLong_FromLong for flag and PyBytes for data)"
+    },
+    {
+      "id": "H0PP-pinot_getline-001-C",
+      "kind": "data",
+      "statement": "Success flag is an int (0/1) built via PyLong_FromLong; line data is a PyBytes object.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:164 + semantic/api/strings.tsv (S_0010fbf4 = \"l\" for int format)"
+    },
+    {
+      "id": "H0PP-pinot_getline-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with error set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:164 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-pinot_getline-001-E",
+      "kind": "side_effect",
+      "statement": "Advances the binary stream position by the number of bytes read.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:164 (stream read advances position)"
+    },
+    {
+      "id": "H0PP-pinot_getline-001-F",
+      "kind": "contract",
+      "statement": "No Python call site found in __init__.py for pinot_getline; callers are unknown.",
+      "authority": "inferred",
+      "verifier": "source_audit",
+      "status": "pass",
+      "source": "semantic/python_side/__init__.py (no reference to pinot_getline)"
+    }
+  ]
+}

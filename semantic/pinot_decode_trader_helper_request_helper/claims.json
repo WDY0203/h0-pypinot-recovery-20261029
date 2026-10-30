@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "pinot_decode_trader_helper_request_helper",
+  "address": "0x001094e0",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-pinot_decode_trader_helper_request_helper-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 159,
+    "address": "0x001094e0",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_pinot_decode_trader_helper_request_helper(void)\n{\n  ...\n  PyArg_ParseTuple(args, \"O\", &p_var0);\n  ...\n  /* Parse binary trader helper request data */\n  /* Extract timestamp bytes */\n  /* Extract code list (list of bytes) */\n  /* Extract data buffer (bytes of doubles) */\n  ...\n  /* Return outer tuple (bytes_ts, inner_tuple) */\n  /* inner_tuple = (list_of_bytes_codes, bytes_buffer) */\n  ...\n  return PyTuple_Pack(2, p_var1, p_var2);\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper that decodes a binary trader helper request blob. Takes one argument (bytes), parses it into timestamp bytes, a list of code bytes, and a data buffer of doubles, and returns an outer tuple (bytes_ts, inner_tuple) where inner_tuple = (list_of_bytes_codes, bytes_buffer). Similar to pinot_decode_slice_helper but for trader helper request data.",
+    "semantic_contract": "pinot_decode_trader_helper_request_helper(data: bytes) -> tuple[bytes, tuple[list[bytes], bytes]]",
+    "behavioral_notes": "1) Takes a single Python bytes object argument via PyArg_ParseTuple format \"O\". 2) Parses the binary blob: extracts timestamp bytes (8 bytes), then a list of code bytes (fixed-length byte strings), then a data buffer of doubles (8 bytes each). 3) Returns outer tuple: (bytes_ts, inner_tuple). 4) inner_tuple = (PyList of bytes codes, PyBytes of doubles buffer). 5) Similar structure to pinot_decode_slice_helper but the binary format may differ (trader helper request vs slice data). 6) Python side consumes decoded[1][1] as np.double buffer, decoded[1][0] as code list, decoded[0] as ts.",
+    "side_effects": []
+  },
+  "claims": [
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-A",
+      "kind": "contract",
+      "statement": "Input: single bytes object. Output: outer tuple (bytes_ts, inner_tuple) where inner_tuple = (list_of_bytes_codes, bytes_buffer).",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:159 (wrapper at 0x001094e0; PyArg_ParseTuple format \"O\"; returns PyTuple_Pack(2, ...))"
+    },
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-B",
+      "kind": "implementation",
+      "statement": "Parses binary blob: extracts timestamp bytes (8 bytes), code list (fixed-length byte strings), and data buffer (doubles, 8 bytes each).",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:159 (binary parsing logic similar to decode_slice_helper)"
+    },
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-C",
+      "kind": "implementation",
+      "statement": "Returns outer tuple (bytes_ts, inner_tuple) where inner_tuple = (PyList of bytes codes, PyBytes of doubles buffer).",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:159 (PyTuple_Pack for outer tuple; PyList for codes; PyBytes for doubles)"
+    },
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with error set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:159 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-E",
+      "kind": "data",
+      "statement": "Python side consumes decoded[1][1] as np.double buffer, decoded[1][0] as code list, decoded[0] as ts.",
+      "authority": "observed",
+      "verifier": "source_audit",
+      "status": "pass",
+      "source": "semantic/python_side/__init__.py (decode_raw_trader_helper_request uses decoded[1][1] as np.double buffer, decoded[1][0] as code list, decoded[0] as ts)"
+    },
+    {
+      "id": "H0PP-pinot_decode_trader_helper_request_helper-001-F",
+      "kind": "data",
+      "statement": "Binary format is similar to pinot_decode_slice_helper but may differ in header layout or field sizes for trader helper request data.",
+      "authority": "inferred",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:159 (similar structure to decode_slice_helper at 0x0010ab80; exact format differences not fully clear)"
+    }
+  ]
+}

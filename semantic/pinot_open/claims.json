@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "module": "H0PP",
+  "subject": "_pypinot.so",
+  "symbol": "pinot_open",
+  "address": "0x0010bf60",
+  "kind": "function",
+  "reconstruction_kind": "semantic",
+  "obligation_id": "H0PP-pinot_open-001",
+  "decompiler_evidence": {
+    "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt",
+    "function_index": 162,
+    "address": "0x0010bf60",
+    "snippet": "/* WARNING: Global funcs are inconsistent */ /* WARNING: Global vars are inconsistent */\nundefined8 H0PP_pinot_open(void)\n{\n  ...\n  PyArg_ParseTuple(args, \"O\", &p_var0);\n  ...\n  /* Try dlopen libpinot_reader.so */\n  /* Fallback: use std::filebuf or ifstream */\n  ...\n  /* Allocate void** via operator_new(8) */\n  ...\n  return PyLong_FromVoidPtr(ptr);\n}"
+  },
+  "reconstruction": {
+    "native_impl": "impl.cpp",
+    "native_test": "test.cpp",
+    "summary": "Python C-API wrapper that opens a Pinot reader library. Takes one argument (a path or options object), attempts to dlopen libpinot_reader.so, falls back to std::filebuf/ifstream on failure, and returns a handle as a Python int (void* cast to long).",
+    "semantic_contract": "pinot_open(path: str) -> int",
+    "behavioral_notes": "1) Takes a single Python object argument via PyArg_ParseTuple format \"O\". 2) Converts argument to C string path. 3) Tries to dlopen libpinot_reader.so via the PIN_CALLBACK mechanism. 4) On dlopen failure, falls back to opening via std::filebuf or ifstream. 5) Allocates a void** handle via operator_new(8). 6) Returns handle as Python int via PyLong_FromVoidPtr. 7) No Python call site found in __init__.py — unknown callers.",
+    "side_effects": [
+      "dlopen of libpinot_reader.so",
+      "Allocation of void** handle (8 bytes) via operator_new",
+      "PIN_CALLBACK handler registration"
+    ]
+  },
+  "claims": [
+    {
+      "id": "H0PP-pinot_open-001-A",
+      "kind": "contract",
+      "statement": "Input: single argument (path or options). Output: handle as Python int (void* cast to long).",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:162 (wrapper at 0x0010bf60; PyArg_ParseTuple format \"O\"; returns PyLong_FromVoidPtr)"
+    },
+    {
+      "id": "H0PP-pinot_open-001-B",
+      "kind": "implementation",
+      "statement": "Attempts dlopen of libpinot_reader.so; on failure falls back to std::filebuf/ifstream.",
+      "authority": "derived",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:162 (PIN_CALLBACK handler tries dlopen, falls back to filebuf/ifstream)"
+    },
+    {
+      "id": "H0PP-pinot_open-001-C",
+      "kind": "implementation",
+      "statement": "Allocates void** handle via operator_new(8) and returns it as Python int via PyLong_FromVoidPtr.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:162 (operator_new(8) for handle, PyLong_FromVoidPtr for return)"
+    },
+    {
+      "id": "H0PP-pinot_open-001-D",
+      "kind": "implementation",
+      "statement": "On PyArg_ParseTuple failure, returns NULL with error set by CPython.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:162 (error goto path returns NULL after PyArg_ParseTuple)"
+    },
+    {
+      "id": "H0PP-pinot_open-001-E",
+      "kind": "side_effect",
+      "statement": "dlopen of libpinot_reader.so and PIN_CALLBACK handler registration occur during open.",
+      "authority": "observed",
+      "verifier": "decompiler",
+      "status": "pass",
+      "source": "reconstructed_cpp/H0PP/H0PP_all_decompiled.txt:162 (dlopen call and PIN_CALLBACK handler init)"
+    },
+    {
+      "id": "H0PP-pinot_open-001-F",
+      "kind": "contract",
+      "statement": "No Python call site found in __init__.py for pinot_open; callers are unknown.",
+      "authority": "inferred",
+      "verifier": "source_audit",
+      "status": "pass",
+      "source": "semantic/python_side/__init__.py (no reference to pinot_open; import mechanism may use it indirectly)"
+    }
+  ]
+}
